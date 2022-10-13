@@ -2,13 +2,16 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// express.static middleware
+app.use(express.static('public'))
+
 // index route
 app.get('/budgets/', (req, res) => {
-    res.send('this is the index route')
+    res.send('hello - this is the index route')
 })
 
 // new route
-app.get('budgets/new', (req, res) => {
+app.get('/budgets/new', (req, res) => {
     res.render('new.ejs')
 })
 
