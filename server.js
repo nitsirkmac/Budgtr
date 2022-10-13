@@ -22,7 +22,9 @@ app.get('/budgets/new', (req, res) => {
 
 // show route
 app.get('/budgets/:index', (req, res) => {
-    res.send('this is the show route')
+    res.render('show.ejs', {
+        activity: budget[req.params.index]
+    })
 })
 
 // create route

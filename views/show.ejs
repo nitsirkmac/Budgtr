@@ -7,8 +7,25 @@
     <link rel="stylesheet" href="/skeleton.css" />
   </head>
   <body>
-    <h1>Budgtr Show Page</h1>
+    <div class="container">
+      <h1><%= activity.name %></h1>
+      <a href="/budgets/"><button>Back</button></a><br>
+      <strong>date</strong> <br>
+      &nbsp <%= activity.date %> <br>
+      <br>
+      <strong>name</strong> <br>
+      &nbsp <%= activity.name %> <br>
+      <br>
+      <strong>from</strong> <br>
+      &nbsp <%= activity.from %> <br>
+      <br>
+      <strong>amount</strong> <br>
+      &nbsp <%= activity.amount %> <br>
+      <br>
+      <strong>tags</strong> <br>
+      &nbsp <%= activity.tags %> 
 
-    <!-- The <%= fruit.name; %> is <%= fruit.color; %>. <% if(fruit.readyToEat === true){ %> It is ready to eat <% } else { %> It is not ready to eat <% } %> -->
+    
+    </div>
   </body>
 </html>
