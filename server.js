@@ -16,21 +16,27 @@ app.get('/budgets/', (req, res) => {
 })
 
 // new route
-app.get('/budgets/new', (req, res) => {
+app.post('/budgets/new', (req, res) => {
+    // console.log(req.body)
     res.render('new.ejs')
-})
-
-// show route
-app.get('/budgets/:index', (req, res) => {
-    res.render('show.ejs', {
-        activity: budget[req.params.index]
-    })
 })
 
 // create route
 app.post('/budgets', (req, res) => {
-    
+    budget.create(req.body, (error, createdBudget) => {
+        res.redirect("/budgets");
+    })
 })
+
+
+// show route
+app.get('/budgets/:id', (req, res) => {
+    res.render('show.ejs', {
+        activity: budget[req.params.id]
+    })
+})
+
+
 
 app.listen(port, () => {
     console.log('listening')
