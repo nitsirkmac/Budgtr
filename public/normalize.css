@@ -137,6 +137,13 @@
     margin: 0.67em 0;
   }
   
+  .lowBalance {
+    background-color: red;
+  }
+
+  .highBalance {
+    background-color: green;
+  }
   /**
    * Address styling not present in IE 8/9.
    */

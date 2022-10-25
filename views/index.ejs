@@ -9,13 +9,13 @@
   <body>
     <div class="container">
       <h1>Budgtr Index Page</h1>
-      
-      
+      <h2 class="<%= style%>">Current Balance: $<%=bankAccount%></h2>
+
       <table>
         <% for(let i = 0; i < allBudgets.length; i++) { %> 
         <tr>
           <td> <%= allBudgets[i].date %></td>
-          <td> <a href="/budgets/<%= i %>"> <%= allBudgets[i].name %> </a> </td>
+          <td> <a href="/budgets/<%=i%>"> <%= allBudgets[i].name %> </a> </td>
           <td> <%= allBudgets[i].amount %></td>
         </tr>
         <% } %>
